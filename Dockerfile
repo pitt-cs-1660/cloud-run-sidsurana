@@ -20,4 +20,5 @@ COPY static static/
 COPY template template/
 
 EXPOSE 8000
-CMD ["uvicorn", "cc_cloud_run.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+CMD ["uvicorn", "cc_cloud_run.main:app", "--host", "0.0.0.0", "--port", "8080"]
