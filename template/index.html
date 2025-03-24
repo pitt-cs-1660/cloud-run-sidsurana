@@ -3,19 +3,15 @@
 <head>
   <title>TABS v SPACES</title>
 
-  <!-- Styling & UI -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>(•‿•)</text></svg>">
 
-  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- ✅ Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-  <!-- ✅ Your Firebase Config and App Logic -->
   <script src="/static/config.js"></script>
   <script src="/static/firebase.js"></script>
 </head>
@@ -70,7 +66,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Hook up the vote buttons only if you implement vote() in firebase.js
+
       const voteTabs = document.getElementById("voteTabs");
       const voteSpaces = document.getElementById("voteSpaces");
 

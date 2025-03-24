@@ -19,7 +19,6 @@ firebase_admin.initialize_app(cred)
 # === FastAPI App Initialization ===
 app = FastAPI()
 
-# ✅ Apply CORS Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Change to specific domains in production
@@ -91,7 +90,6 @@ async def create_vote(
             except Exception as e:
                 raise HTTPException(status_code=401, detail=f"Invalid token: {str(e)}")
 
-    # ✅ Save the vote
     votes_collection.add({
         "team": team,
         "timestamp": firestore.SERVER_TIMESTAMP,
