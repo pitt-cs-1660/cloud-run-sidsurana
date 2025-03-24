@@ -8,16 +8,18 @@ services:
       db:
         condition: service_healthy
     environment:
-      - FIRESTORE_EMULATOR_HOST=db:8080
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/serviceAccountKey.json
       - ENVIRONMENT=dev
       - PORT=8000
-      - GCLOUD_PROJECT=vote
+      - GCLOUD_PROJECT=assignment-3-454322
     ports:
       - "9080:8000"
     volumes:
       - ./cc_cloud_run:/app/cc_cloud_run:Z
       - ./static:/app/static:Z
-      - ./template:/app/templates:Z
+      - ./template:/app/template:Z
+      - ./serviceAccountKey.json:/app/serviceAccountKey.json:Z
+
   db:
     image: firestore
     build:
